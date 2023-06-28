@@ -28,6 +28,7 @@ projects.forEach(element => {
 document.addEventListener('scroll', (event) => {
     setTimeout(function() {
     let winHeight = window.innerHeight;
+    let winWidth = window.innerWidth;
     let about = document.getElementById("about");
     let portfolio = document.getElementById("portfolio");
     let pictures = document.getElementById("pictures");
@@ -63,13 +64,13 @@ document.addEventListener('scroll', (event) => {
         picturesCarousel.style.position = "fixed";
         picturesCarousel.style.marginTop = "10vh";
         picturesCarousel.style.top = scrollY * 0.001 + 'px';
-        picturesCarousel.style.left = -(scrollY - 4.52 * winHeight) * 0.55 + 'px';
+        picturesCarousel.style.left = -(scrollY - 4.52 * winHeight) * 0.32 * winWidth / winHeight + 'px';
     } else if (scrollY <= 4.52 * winHeight) {
         picturesCarousel.style.position = "initial";
         picturesCarousel.style.marginTop = "0";
     } else {
         picturesCarousel.style.position = "fixed";
-        picturesCarousel.style.marginTop = (winHeight / 10 - (scrollY - 7.67 * winHeight)) + "px";
+        picturesCarousel.style.marginTop = (winHeight / 10 - (scrollY - 7.67 * winHeight)) * 0.32 * winWidth / winHeight + "px";
         picturesCarousel.style.top = scrollY * 0.001 + 'px';
     }
 
