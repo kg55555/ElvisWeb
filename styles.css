@@ -14,11 +14,12 @@ header {
     height: 4em;
     top: 0;
     z-index: 999;
+    transition: background-color 1s, color 1s;
 }
 
 main {
     position: relative;
-    height: 580vh;
+    height: 870vh;
     overflow: hidden;
 }
 
@@ -34,7 +35,6 @@ section {
     z-index: 10;
     padding: 15%;
     padding-top: 5%;
-
 }
 
 #portfolio {
@@ -48,7 +48,7 @@ section {
 #pictures {
     top: 450vh;
     background-color: aqua;
-    height: 120vh;
+    height: 450vh;
     z-index: 30;
 
 }
@@ -83,6 +83,7 @@ nav ul {
 #navbar {
     display: flex;
     flex: 0 0 40%;
+    justify-content: right;
 }
 
 #navbar li {
@@ -182,18 +183,66 @@ nav ul {
     font-size: 5.5em;
     display: flex;
     flex-direction: row;
-    gap: 3vw;
     box-sizing: border-box;
-    
 }
 
 .project-number {
-    width: 10%;
+    width: 20%;
+}
+
+.project-transition-container {
+    width: 80%;
+    position: relative;
 }
 
 .project-text {
     text-align: left;
     width: 80%;
+    position: absolute;
+    transition: opacity 1s;
+}
+
+.project-description {
+    display: flex;
+    width: 80%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+
+}
+
+.project-summary {
+    flex: 4;
+    text-align: left;
+}
+
+.project-links {
+    flex: 1;
+}
+
+.job-title {
+    font-size: 0.3em;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.job-description {
+    font-size: 0.2em;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.job-classification {
+    font-size: 0.3em;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.job-link {
+    text-decoration: none;
+    font-size: 0.2em;
+    margin: 0;
+    margin-top: 0.5em;
 }
 
 #pictures {
@@ -203,19 +252,17 @@ nav ul {
 
 #pictures-title {
     width: 80%;
-
     margin-top: 10vh;
     margin-bottom: 4vh;
     margin-left: 11vw;
-    
     font-size: 1.5em;
 }
 
 #pictures-carousel {
     display: flex;
     width: 100vw;
-    overflow-x: scroll;
     height: 80vh;
+    margin-left: 5vw;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
 }
@@ -234,8 +281,4 @@ nav ul {
 .pictures-img img {
     height: 100%;
     width: 100%;
-
 }
-
-
-
