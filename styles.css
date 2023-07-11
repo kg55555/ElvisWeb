@@ -3,23 +3,26 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    color: #C6C6C6;
 }
 
 header {
     align-items: center;
     padding: 1vh 0 1vh 0;
-    background-color: #f1f1f1;
+    background-color: transparent;
+    color: #1E1E1E;
     position: fixed;
     width: 100%;
-    height: 4em;
+    height: 5vh;
     top: 0;
     z-index: 999;
-    transition: background-color 1s, color 1s;
+    transition: background-color 0.5s, color 1s;
 }
 
 main {
     position: relative;
-    height: 870vh;
+    height: 920vh;
+    background-color: #c6c6c6;
     overflow: hidden;
 }
 
@@ -31,33 +34,32 @@ section {
 
 #about {
     top: 0;
-    background-color: yellow;
+    background-color: #c6c6c6;
     z-index: 10;
     padding: 15%;
     padding-top: 5%;
+    transition: transform 0.35s ease-out;
 }
 
 #portfolio {
     top: 100vh;
     height: 200vh;
-    background-color: green;
+    background-color: #1E1E1E;
     z-index: 20;
-
 }
 
 #pictures {
     top: 450vh;
-    background-color: aqua;
+    background-color: #1E1E1E;
     height: 450vh;
     z-index: 30;
-
 }
 
 #footer {
     bottom: 0;
-    height: 10vh;
+    height: 40vh;
     z-index: 990;
-    background-color: red;
+    background-color: #1E1E1E;
 }
 
 nav {
@@ -75,66 +77,67 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    font-size: 1em;
+    font-size: 1.5vw;
     margin: auto;
     padding: 0;
 }
 
+#nav-wrapper {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: right;
+}
+
 #navbar {
     display: flex;
-    flex: 0 0 40%;
-    justify-content: right;
+    width: fit-content;
+    transition: border 1s, color 1s, background-color 1s;
 }
 
 #navbar li {
     align-items: center;
-    padding-left: 1em;
+    cursor: pointer;
+    padding: 2vh;
 }
 
-#navbar li a {
-    text-decoration: none;
-    color: #333;
+#navbar li:hover {
+    color: white;
 }
 
 #siteName {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
 }
-
-#siteName a {
-    text-decoration: none;
-    color: #333;
-}
-
 
 .title-txt {
     position: relative;
-    font-size: 8em;
+    font-size: 8.5vw;
     width: 70%;
     margin: 0;
     z-index: 15;
-
+    color: #1E1E1E;
 }
 
 #greenMark {
     z-index: 14;
     position: relative;
-    top: 8.5em;
-    left: 31em;
-    width: 28em;
-    height: 3em;
+    top: 19vh;
+    left: 33.5vw;
+    width: 30vw;
+    height: 5vh;
     background-color: lightgreen;
 
 }
 
 #title-overlay {
     position: absolute;
-    top: 0;
+    top: -5vh;
     left: 0;
-    padding-top: 6.25%;
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     visibility: hidden;
-    background-color: #f1f1f1;
+    background-color: #1E1E1E;
     transition: clip-path 0.3s;
     transition-timing-function: ease-out;
 
@@ -143,7 +146,7 @@ nav ul {
 
 .overlay-txt {
     white-space: nowrap;
-    font-size: 8em;
+    font-size: 8.5vw;
     margin: 0;
 }
 
@@ -157,7 +160,8 @@ nav ul {
 }
 
 #about > p {
-    font-size: 1.5em;
+    font-size: 2vw;
+    color: #1E1E1E;
 }
 
 
@@ -172,18 +176,24 @@ nav ul {
 .portfolio-title {
     margin-top: 10vh;
     margin-bottom: 4vh;
-    width: 45%;
-    font-size: 1.5em;
+    width: 80%;
+    font-size: 1.5vw;
     text-align: left;
 }
 
 .project-row {
     width: 80%;
     height: 8%;
-    font-size: 5.5em;
+    font-size: 5.2vw;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 0.3vh solid #C6C6C6;
+    overflow: hidden;
+}
+
+.project-content {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
 }
 
 .project-number {
@@ -199,7 +209,7 @@ nav ul {
     text-align: left;
     width: 80%;
     position: absolute;
-    transition: opacity 1s;
+
 }
 
 .project-description {
@@ -207,7 +217,6 @@ nav ul {
     width: 80%;
     position: absolute;
     opacity: 0;
-    transition: opacity 1s;
 
 }
 
@@ -216,33 +225,78 @@ nav ul {
     text-align: left;
 }
 
+.project-transition-anim {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(33,33,33,1));
+}
+
+@keyframes slide-in {
+    0% {left: 100%}
+    50% {left: -200%}
+    100% {left: 100%}
+}
+
+@keyframes slide-out {
+    0% {left: 100%}
+    50% {left: -200%}
+    100% {left: 100%}
+}
+
+@keyframes fade-in {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fade-out {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes appear {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes disappear {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
 .project-links {
     flex: 1;
 }
 
 .job-title {
-    font-size: 0.3em;
+    font-size: 2vw;
     margin: 0;
-    margin-top: 0.5em;
+    margin-top: 1vh;
 }
 
 .job-description {
-    font-size: 0.2em;
+    font-size: 1.5vw;
     margin: 0;
-    margin-top: 0.5em;
+    margin-top: 1vh;
 }
 
 .job-classification {
-    font-size: 0.3em;
+    font-size: 1.5vw;
     margin: 0;
-    margin-top: 0.5em;
+    margin-top: 1vh;
 }
 
 .job-link {
     text-decoration: none;
-    font-size: 0.2em;
     margin: 0;
-    margin-top: 0.5em;
+    font-size: 1vw;
+    margin-top: 3vh;
 }
 
 #pictures {
@@ -251,18 +305,18 @@ nav ul {
 }
 
 #pictures-title {
-    width: 80%;
+    width: 100%;
     margin-top: 10vh;
     margin-bottom: 4vh;
-    margin-left: 11vw;
-    font-size: 1.5em;
+    padding-left: 10%;
+    font-size: 1.5vw;
 }
 
 #pictures-carousel {
     display: flex;
     width: 100vw;
     height: 80vh;
-    margin-left: 5vw;
+    padding-left: 10%;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
 }
@@ -276,9 +330,166 @@ nav ul {
     height: 100%;
     margin-right: 2vw;
     flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.pictures-overlay {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    color: white;
+}
+
+@keyframes slide-up {
+    0% {top: 100%}
+    100% {top: 0}
+}
+
+@keyframes slide-down {
+    0% {top: 0}
+    100% {top: 100%}
+}
+
+@keyframes picture-text-fade-in {
+    0% {opacity: 0}
+    75% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes picture-text-fade-out {
+    0% {opacity: 1}
+    25% {opacity: 0}
+    100% {opacity: 0}
+}
+
+.picture-name {
+    text-align: center;
+    font-size: 2vw;
+    margin: 1vw;
+}
+
+.picture-desc {
+    margin: 1.5vw;
+    font-size: 1.5vw;
+    height: 20%;
 }
 
 .pictures-img img {
     height: 100%;
     width: 100%;
+}
+
+#earth-banner {
+    width: 200%;
+    height: 5vh;
+    background-color: white;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    transition: all 1s ease;
+    animation: scrollText 24s infinite linear;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-33.743%);}
+}
+
+
+.earth-banner-text {
+    width: fit-content;
+    color: #1E1E1E;
+    margin: 0;
+    white-space: pre;
+}
+
+.earth-banner-pic {
+    display: inline;
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+#contact-content {
+    display: flex;
+    height: 100%;
+}
+
+#contact-content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-content > div {
+    justify-content: center;
+}
+
+#footer-title {
+    font-size: 2.5vw;
+    padding-left: 10vw;
+    margin: 0;
+}
+
+#contact-link-grid {
+    display: grid;
+    height: 20%;
+    padding-left: 10vw;
+    padding-top: 4vh;
+    height: fit-content;
+    grid-template-areas: 
+    'linkedin email'
+    'medium github';
+}
+
+.contact-links {
+    margin-right: 1.5vw;
+    margin-bottom: 3vh;
+}
+
+#linkedin-link {
+    grid-area: linkedin;
+}
+
+#email-link {
+    grid-area: email;
+}
+
+#medium-link {
+    grid-area: medium;
+}
+
+#github-link {
+    grid-area: github;
+}
+
+.contact-a {
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #C6C6C6;
+}
+
+#weather-api {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    flex-grow: 1;
+    padding-right: 10vw;
+
+}
+
+.weather-api-text {
+    margin: 0;
+    font-size: 1.2vw;
+    margin-bottom: 0.5vh;
+}
+
+#weather-api-city {
+    font-size: 2vw;
 }

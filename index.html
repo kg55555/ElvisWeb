@@ -11,14 +11,15 @@
 
         <nav>
             <ul>
-                <li id="siteName"><a href= "#">Elvis Hsiao</a></li>
-                <div id="navbar">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                <li id="siteName">Elvis Hsiao</li>
+                <div id="nav-wrapper">
+                    <div id="navbar">
+                        <li id="about-button">About</li>
+                        <li id="work-button">Work</li>
+                        <li id="photography-button">Photography</li>
+                        <li id="contact-button">Get In Touch</li>
+                    </div>
                 </div>
-
             </ul>
         </nav>
     </header>
@@ -35,9 +36,11 @@
 
             <div id="title-overlay">
                 <h1 class="overlay-txt">Product Designer · Product Designer · Product Designer</h1>
-                <h1 class="overlay-txt">Product Designer · Product Designer · Product Designer</h1>
-                <h1 class="overlay-txt">Product Designer · Product Designer · Product Designer</h1>
-                <h1 class="overlay-txt">Product Designer · Product Designer · Product Designer</h1>
+                <h1 class="overlay-txt">roduct Designer · Product Designer · Product Designer</h1>
+                <h1 class="overlay-txt">oduct Designer · Product Designer · Product Designer</h1>
+                <h1 class="overlay-txt">duct Designer · Product Designer · Product Designer</h1>
+                <h1 class="overlay-txt">uct Designer · Product Designer · Product Designer</h1>
+                <h1 class="overlay-txt">ct Designer · Product Designer · Product Designer</h1>
             </div>
             <div id="listener-layer"></div>
 
@@ -47,158 +50,184 @@
             <section id="portfolio">
                 <div class="portfolio-title">A Collection of <b>Work</b></div>
                 <div class="project-row" id="pondr">
-                    <div class="project-number">01</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="pondr-text">Pondr</div>
-                        <div class="project-description" id="pondr-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="pondr-num">01</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="pondr-text">Pondr</div>
+                            <div class="project-description" id="pondr-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="pondr-anim"></div> 
                 </div>
 
                 <div class="project-row" id="hitachi">
-                    <div class="project-number">02</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="hitachi-text">Hitachi Energy</div>
-                        <div class="project-description" id="hitachi-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="hitachi-num">02</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="hitachi-text">Hitachi Energy</div>
+                            <div class="project-description" id="hitachi-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="hitachi-anim"></div> 
                 </div>
 
                 <div class="project-row" id="chexy">
-                    <div class="project-number">03</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="chexy-text">Chexy</div>
-                        <div class="project-description" id="chexy-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="chexy-num">03</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="chexy-text">Chexy</div>
+                            <div class="project-description" id="chexy-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="chexy-anim"></div> 
                 </div>
 
                 <div class="project-row" id="rate">
-                    <div class="project-number">04</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="rate-text">Rate My Kickz</div>
-                        <div class="project-description" id="rate-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="rate-num">04</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="rate-text">Rate My Kickz</div>
+                            <div class="project-description" id="rate-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="rate-anim"></div> 
                 </div>
 
                 <div class="project-row" id="uxcol">
-                    <div class="project-number">05</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="uxcol-text">UX Collective</div>
-                        <div class="project-description" id="uxcol-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="uxcol-num">05</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="uxcol-text">UX Collective</div>
+                            <div class="project-description" id="uxcol-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="uxcol-anim"></div> 
                 </div>
 
                 <div class="project-row" id="neri">
-                    <div class="project-number">06</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="neri-text">Neri & Hu</div>
-                        <div class="project-description" id="neri-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="neri-num">06</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="neri-text">Neri & Hu</div>
+                            <div class="project-description" id="neri-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="neri-anim"></div> 
                 </div>
 
                 <div class="project-row" id="troop">
-                    <div class="project-number">07</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="troop-text">Troop</div>
-                        <div class="project-description" id="troop-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="troop-num">07</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="troop-text">Troop</div>
+                            <div class="project-description" id="troop-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="troop-anim"></div> 
                 </div>
 
                 <div class="project-row" id="sfu">
-                    <div class="project-number">08</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="sfu-text">SFU</div>
-                        <div class="project-description" id="sfu-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="sfu-num">08</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="sfu-text">SFU</div>
+                            <div class="project-description" id="sfu-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="sfu-anim"></div> 
                 </div>
 
                 <div class="project-row" id="dare">
-                    <div class="project-number">09</div>
-                    <div class="project-transition-container">
-                        <div class="project-text" id="dare-text">Dare Apparel Co</div>
-                        <div class="project-description" id="dare-desc">
-                            <div class="project-summary">
-                                <p class="job-title">Lead Project Designer</p>
-                                <p class="job-description">Lorem Ipsum</p>
-                            </div>
-                            <div class="project-links">
-                                <p class="job-classification">Fulltime Work</p>
-                                <p class="job-link"><a href="#">View Project</a></p>
+                    <div class="project-content">
+                        <div class="project-number" id="dare-num">09</div>
+                        <div class="project-transition-container">
+                            <div class="project-text" id="dare-text">Dare Apparel Co.</div>
+                            <div class="project-description" id="dare-desc">
+                                <div class="project-summary">
+                                    <p class="job-title">Lead Project Designer</p>
+                                    <p class="job-description">Lorem Ipsum</p>
+                                </div>
+                                <div class="project-links">
+                                    <p class="job-classification">Fulltime Work</p>
+                                    <p class="job-link"><a href="#">View Project</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-transition-anim" id="dare-anim"></div> 
                 </div>
-
                 
 
 
@@ -209,18 +238,129 @@
             <section id="pictures">
                 <p id="pictures-title">My perspective through <b>Photographs</b></p>
                 <div id="pictures-carousel">
-                    <div class="pictures-img"><img src="placeholder.png"></div>
-                    <div class="pictures-img"><img src="placeholder.png"></div>
-                    <div class="pictures-img"><img src="placeholder.png"></div>
-                    <div class="pictures-img"><img src="placeholder.png"></div>
-                    <div class="pictures-img"><img src="placeholder.png"></div>
-                    <div class="pictures-img"><img src="placeholder.png"></div>
+                    <div class="pictures-img" id="one-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="one-picture-overlay">
+                            <p class="picture-name" id="one-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="one-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pictures-img"  id="two-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="two-picture-overlay">
+                            <p class="picture-name" id="two-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="two-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pictures-img"  id="three-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="three-picture-overlay">
+                            <p class="picture-name" id="three-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="three-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pictures-img"  id="four-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="four-picture-overlay">
+                            <p class="picture-name" id="four-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="four-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pictures-img" id="five-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="five-picture-overlay">
+                            <p class="picture-name" id="five-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="five-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pictures-img" id="six-picture" data-active="false">
+                        <img src="placeholder.png">
+                        <div class="pictures-overlay" id="six-picture-overlay">
+                            <p class="picture-name" id="six-picture-title">
+                                Title
+                            </p>
+                            <p class="picture-desc" id="six-picture-text">
+                                Something about the picture
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
             </section>
 
             <section class="" id="footer">
-            <h2>Contact Us</h2>
+            <div id="earth-banner">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+                <p class="earth-banner-text">  This site is 100% carbon neutral  </p> <img src="planet-earth.png" class="earth-banner-pic">
+            </div>
+
+            <div id="contact-content">
+                <div id="contact-content-container">
+                    <h2 id="footer-title">Get In Touch</h2>
+                    <div id="contact-link-grid">
+                        <div class="contact-links" id="linkedin-link">
+                            <svg width="1vw" height="1vw" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 2C17.5 1.17157 16.8284 0.5 16 0.500001L2.5 0.5C1.67157 0.5 1 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5H14.5V15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.93934L0.93934 14.9393L3.06066 17.0607Z" fill="#C6C6C6"/>
+                                </svg>
+                                <a href="https://www.linkedin.com" class="contact-a">Linkedin</a>
+                        </div>
+                        <div class="contact-links" id="email-link">
+                            <svg width="1vw" height="1vw" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 2C17.5 1.17157 16.8284 0.5 16 0.500001L2.5 0.5C1.67157 0.5 1 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5H14.5V15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.93934L0.93934 14.9393L3.06066 17.0607Z" fill="#C6C6C6"/>
+                                </svg>
+                                <a href="mailto:name@email.com" class="contact-a">Email</a>
+                        </div>
+                        <div class="contact-links" id="medium-link">
+                            <svg width="1vw" height="1vw" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 2C17.5 1.17157 16.8284 0.5 16 0.500001L2.5 0.5C1.67157 0.5 1 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5H14.5V15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.93934L0.93934 14.9393L3.06066 17.0607Z" fill="#C6C6C6"/>
+                                </svg>
+                                <a href="https://www.medium.com" class="contact-a">Medium</a>
+                        </div>
+                        <div class="contact-links" id="github-link">
+                            <svg width="1vw" height="1vw" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 2C17.5 1.17157 16.8284 0.5 16 0.500001L2.5 0.5C1.67157 0.5 1 1.17157 1 2C1 2.82843 1.67157 3.5 2.5 3.5H14.5V15.5C14.5 16.3284 15.1716 17 16 17C16.8284 17 17.5 16.3284 17.5 15.5L17.5 2ZM3.06066 17.0607L17.0607 3.06066L14.9393 0.93934L0.93934 14.9393L3.06066 17.0607Z" fill="#C6C6C6"/>
+                                </svg>
+                                <a href="https://www.github.com" class="contact-a">Github</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="weather-api">
+                    <p class="weather-api-text" id="weather-api-city"><b>Vancouver, BC</b></p>
+                    <p class="weather-api-text">Sat, May 13th 2023</p>
+                    <p class="weather-api-text">11:39:55 pm </p>
+                    <p class="weather-api-text">Sunny, 18.8 C</p>
+                </div>
+            </div>
+
         
             </section>
 
