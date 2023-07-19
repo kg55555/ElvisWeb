@@ -6,6 +6,8 @@ let scrollY = 0;
 let carouselScroll = 0;
 
 let projects = ["pondr", "hitachi", "chexy", "uxcol", "troop", "sfu"];
+let projectsTrans = {"pondr": 1, "hitachi": 1, "chexy": 1, "uxcol": 1, "troop": 1, "sfu": 1};
+let projectsTransLock = {"pondr": 0, "hitachi": 0, "chexy": 0, "uxcol": 0, "troop": 0, "sfu": 0};
 
 projects.forEach(element => {
     let projectOne = document.getElementById(element);
@@ -16,20 +18,26 @@ projects.forEach(element => {
 
     projectOne.addEventListener('mouseenter', (event) => {
 
-        if (projectOneText.style.opacity == 1) {
+        if (projectsTrans[element] == 1 && projectsTransLock[element] == 0) {
+            projectsTransLock[element] = 1;
             projectOneText.style.animation = "disappear 1000ms";
             projectOneDesc.style.animation = "appear 1000ms";
             projectOneNum.style.animation = "fade-in 1000ms";
             projectOneAnim.style.animation = "slide-in 1000ms";
             projectOneText.style.opacity = 0;
             projectOneDesc.style.opacity = 1;
-        } else {
+            projectsTrans[element] = 0;
+            projectsTransLock[element] = 0;
+        } else if (projectsTransLock[element] == 0) {
+            projectsTransLock[element] = 1;
             projectOneText.style.animation = "appear 1000ms";
             projectOneDesc.style.animation = "disappear 1000ms";
             projectOneNum.style.animation = "fade-out 1000ms";
             projectOneAnim.style.animation = "slide-out 1000ms";
             projectOneText.style.opacity = 1;
             projectOneDesc.style.opacity = 0;
+            projectsTrans[element] = 1;
+            projectsTransLock[element] = 0;
         }
 
     })
@@ -66,7 +74,7 @@ allPictures.forEach(element => {
 let navBar = document.getElementById("navbar");
 
 document.addEventListener('scroll', (event) => {
-    setTimeout(function() {
+
     let winHeight = window.innerHeight;
     let winWidth = window.innerWidth;
     let about = document.getElementById("about");
@@ -118,8 +126,6 @@ document.addEventListener('scroll', (event) => {
         picturesCarousel.style.marginTop = (winHeight / 10 - (scrollY - 7.67 * winHeight)) * 0.33 * winWidth / winHeight + "px";
         picturesCarousel.style.top = scrollY * 0.001 + 'px';
     }
-
-    }, 0);
 
 })
 
