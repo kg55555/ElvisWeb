@@ -101,7 +101,8 @@ document.addEventListener('scroll', (event) => {
 
     about.style.transform = "translateY(" + scrollY * 0.8 + "px)";
 
-    if (scrollY > 0 && scrollY <= 2 * 2 * winHeight) {
+
+    if (scrollY > 0 && scrollY <= 2.2 * winHeight) {
         portfolioFinalPos = scaleFactor * winHeight + window.scrollY / 3 ;
         portfolio.style.top = portfolioFinalPos + "px";
 
@@ -137,7 +138,7 @@ listenerLayer.addEventListener("mousemove", (event) => {
         let winHeight = window.innerHeight;
         overlay.style.visibility = "visible";
         overlay.style.clipPath = "circle(" + 0.2 * winHeight + "px at " + event.clientX + "px " + (event.clientY + scrollY * 0.2) + "px)";
-        console.log("running");
+
         if (event.clientY < 0.3 * winHeight) {
             navBar.style.backgroundColor = "#c6c6c6";
         } else {
@@ -160,7 +161,7 @@ let buttonListeners = ["about", "work", "photography", "contact"];
 let buttonScroll = [0, 2.28, 4.51, 8.2];
 
 for(let i = 0; i < buttonListeners.length; i++) {
-    console.log(i, buttonListeners[i], buttonScroll[i])
+
     let btn = document.getElementById(buttonListeners[i] + "-button");
     btn.addEventListener("click", (event) => {
 
