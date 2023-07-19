@@ -51,6 +51,7 @@ section {
     top: 100vh;
     height: 200vh;
     background-color: #1E1E1E;
+    padding-top: 10vh;
     z-index: 20;
 }
 

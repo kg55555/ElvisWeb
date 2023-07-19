@@ -158,7 +158,7 @@ listenerLayer.addEventListener("mouseout", (event) => {
 });
 
 let buttonListeners = ["about", "work", "photography", "contact"];
-let buttonScroll = [0, 2.28, 4.51, 8.2];
+let buttonScroll = [0, 3.2, 4.51, 8.2];
 
 for(let i = 0; i < buttonListeners.length; i++) {
 
