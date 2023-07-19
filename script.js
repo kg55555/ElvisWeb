@@ -128,18 +128,16 @@ let overlay = document.getElementById("title-overlay");
 let listenerLayer = document.getElementById("listener-layer");
 
 listenerLayer.addEventListener("mousemove", (event) => {
-    setTimeout(function() {
         let winHeight = window.innerHeight;
         overlay.style.visibility = "visible";
         overlay.style.clipPath = "circle(" + 0.2 * winHeight + "px at " + event.clientX + "px " + (event.clientY + scrollY * 0.2) + "px)";
-
+        console.log("running");
         if (event.clientY < 0.3 * winHeight) {
             navBar.style.backgroundColor = "#c6c6c6";
         } else {
             navBar.style.backgroundColor = "transparent";
         }
 
-    }, 0);
 });
 
 listenerLayer.addEventListener("mouseout", (event) => {
@@ -170,3 +168,34 @@ siteHome.addEventListener("click", (event) => {
 })
 
 }
+
+$(document).ready(function () {
+
+    setInterval(function () {
+      var dateTime = moment().format("MMMM Do YYYY");
+      $("#date-time").text(dateTime);
+      dateTime = moment().format("h:mm:ss a")
+      $("#date-hour").text(dateTime);
+    }, 1000);
+  
+    // Fetch the weather for Vancouver
+    var apiKey = "20d9814bf4msh84563c01c908c51p145503jsn624eb7491784";
+    var apiUrl = "https://weatherapi-com.p.rapidapi.com/current.json?q=V5H";
+  
+    fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": apiKey,
+        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the weather and temperature in the footer
+        $("#weather").text(data.current.condition.text + ", " + data.current.temp_c + "°C");
+      })
+      .catch((error) => {
+        // Show an error message if the weather could not be fetched
+        $("#weather").text("Error fetching weather.");
+      });
+  });

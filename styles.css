@@ -138,10 +138,10 @@ nav ul {
     z-index: 14;
     position: absolute;
     top: 70%;
-    left: 34%;
-    width: 30%;
+    left: 35%;
+    width: 32%;
     height: 18%;
-    background-color: lightgreen;
+    background-color: #A5E080;
 
 }
 
@@ -409,14 +409,15 @@ nav ul {
 }
 
 .picture-name {
-    text-align: center;
+    text-align: left;
     font-size: 2vw;
     margin: 1vw;
+    margin-bottom: 0;
 }
 
 .picture-desc {
-    margin: 1.5vw;
-    font-size: 1.5vw;
+    margin: 1vw;
+    font-size: 1.2vw;
     height: 20%;
 }
 
@@ -465,6 +466,7 @@ nav ul {
 #contact-content-container {
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
 }
 
 #contact-content > div {
@@ -473,15 +475,13 @@ nav ul {
 
 #footer-title {
     font-size: 2.5vw;
-    padding-left: 10vw;
     margin: 0;
 }
 
 #contact-link-grid {
     display: grid;
     height: 20%;
-    padding-left: 10vw;
-    padding-top: 4vh;
+    padding-top: 5%;
     height: fit-content;
     grid-template-areas: 
     'linkedin email'
@@ -489,8 +489,8 @@ nav ul {
 }
 
 .contact-links {
-    margin-right: 1.5vw;
-    margin-bottom: 3vh;
+    margin-right: 2%;
+    margin-bottom: 5%;
 }
 
 #linkedin-link {
@@ -524,7 +524,7 @@ nav ul {
     flex-direction: column;
     text-align: right;
     flex-grow: 1;
-    padding-right: 10vw;
+    padding-right: 10%;
 
 }
 
@@ -538,8 +538,3 @@ nav ul {
     font-size: 2vw;
 }
 
-@media (max-width: 1000px) {
-    .title-txt {
-        font-size: 4vh;
-    }
-}
