@@ -5,7 +5,7 @@ let scaleFactor = 1.5;
 let scrollY = 0;
 let carouselScroll = 0;
 
-let projects = ["pondr", "hitachi", "chexy", "rate", "uxcol", "neri", "troop", "sfu", "dare"];
+let projects = ["pondr", "hitachi", "chexy", "uxcol", "troop", "sfu"];
 
 projects.forEach(element => {
     let projectOne = document.getElementById(element);
@@ -32,9 +32,8 @@ projects.forEach(element => {
             projectOneDesc.style.opacity = 0;
         }
 
-
-
     })
+
 });
 
 let allPictures = ["one", "two", "three", "four", "five", "six"];
@@ -164,4 +163,10 @@ for(let i = 0; i < buttonListeners.length; i++) {
         window.scrollTo(0, buttonScroll[i] * window.innerHeight);
 
     })
+
+let siteHome = document.getElementById("siteName");
+siteHome.addEventListener("click", (event) => {
+    window.location.assign("index.html");
+})
+
 }
