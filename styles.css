@@ -3,6 +3,11 @@
     src: url("Tomato_Grotesk/TomatoGrotesk-Medium.otf");
 }
 
+@font-face {
+    font-family: tomatogroteskreg;
+    src: url("Tomato_Grotesk/TomatoGrotesk-Regular.otf");
+}
+
 body, html {
     font-family: tomatogrotesk;
     scroll-behavior: smooth;
@@ -317,9 +322,9 @@ nav ul {
 }
 
 .job-description {
-    font-size: 1.2vw;
+    font-size: 1vw;
     margin: 0;
-
+    font-family: tomatogroteskreg;
 }
 
 .job-classification {
@@ -378,12 +383,13 @@ nav ul {
 .pictures-overlay {
     position: absolute;
     top: 100%;
+    left: -1%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: 102%;
+    height: 102%;
     justify-content: end;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to top, rgba(30, 30, 30, 1), rgba(30, 30, 30, 0));
     color: white;
 }
 
@@ -412,12 +418,12 @@ nav ul {
 .picture-name {
     text-align: left;
     font-size: 2vw;
-    margin: 1vw;
+    margin: 1.2vw;
     margin-bottom: 0;
 }
 
 .picture-desc {
-    margin: 1vw;
+    margin: 1.2vw;
     font-size: 1.2vw;
     height: 20%;
 }
