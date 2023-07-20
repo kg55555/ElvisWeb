@@ -45,12 +45,17 @@ projects.forEach(element => {
 });
 
 let allPictures = ["one", "two", "three", "four", "five", "six"];
+let pictureLinks = {"one": "https://doc.clickup.com/9003198274/p/h/8ca3tu2-462/f82d436bae9fde2", "two": "https://elvisdare07.github.io/Neri-Hu/", "three": "https://elvisdare07.github.io/EHCapital/", "four": "#", "five": "https://doc.clickup.com/9003198274/p/h/8ca3tu2-702/463fb864b8a0446#", "six": "https://doc.clickup.com/9003198274/p/h/8ca3tu2-702/463fb864b8a0446"}
 
 allPictures.forEach(element => {
     let picture = document.getElementById(element + "-picture");
     let pictureOverlay = document.getElementById(element + "-picture-overlay");
     let pictureTitle = document.getElementById(element + "-picture-title");
     let pictureText = document.getElementById(element + "-picture-text");
+
+    pictureOverlay.addEventListener('click', (event)=> {
+        window.open(pictureLinks[element]);
+    })
 
     picture.addEventListener('mouseenter', (event) => {
         if (picture.dataset.active == "false") {
@@ -206,3 +211,7 @@ $(document).ready(function () {
         $("#weather").text("Error fetching weather.");
       });
   });
+
+  window.onbeforeunload = () => {
+    window.scrollTo({top: 0, left:0, behavior: "instant"});
+  }

@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: tomatogroteskreg;
-    src: url("Tomato_Grotesk/TomatoGrotesk-Regular.otf");
+    font-family: tomatogrotesklight;
+    src: url("Tomato_Grotesk/TomatoGrotesk-Light.otf");
 }
 
 body, html {
@@ -137,15 +137,30 @@ nav ul {
 }
 
 #title-mark {
+    width: 70%;
     position: relative;
+    display: flex;
+}
+
+#title-mark > div {
+    position: relative;
+}
+
+.mark-txt {
+    z-index: 15;
+    position: relative;
+    white-space: pre;
+    font-size: 7vw;
+    margin: 0;
+    color: #1E1E1E;
 }
 
 #greenMark {
     z-index: 14;
     position: absolute;
-    top: 70%;
-    left: 35%;
-    width: 32%;
+    top: 72%;
+    left: 1%;
+    width: 102%;
     height: 18%;
     background-color: #A5E080;
 
@@ -324,7 +339,7 @@ nav ul {
 .job-description {
     font-size: 1vw;
     margin: 0;
-    font-family: tomatogroteskreg;
+    font-family: tomatogrotesklight;
 }
 
 .job-classification {
@@ -378,19 +393,32 @@ nav ul {
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
+    background-color: black;
+}
+
+#five-picture {
+    background-color: white;
+}
+
+#six-picture {
+    background-color: white;
 }
 
 .pictures-overlay {
     position: absolute;
     top: 100%;
-    left: -1%;
+    left: -2%;
     display: flex;
     flex-direction: column;
-    width: 102%;
-    height: 102%;
+    width: 104%;
+    height: 110%;
     justify-content: end;
     background-image: linear-gradient(to top, rgba(30, 30, 30, 1), rgba(30, 30, 30, 0));
     color: white;
+}
+
+.pictures-overlay:hover {
+    cursor: pointer;
 }
 
 @keyframes slide-up {
@@ -426,6 +454,7 @@ nav ul {
     margin: 1.2vw;
     font-size: 1.2vw;
     height: 20%;
+    font-family: tomatogrotesklight;
 }
 
 .pictures-img img {
